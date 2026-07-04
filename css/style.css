@@ -1,4 +1,6 @@
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -22,18 +24,31 @@ body {
 }
 
 /* 5. Improve media defaults */
-img, picture, video, canvas, svg {
+img,
+picture,
+video,
+canvas,
+svg {
   display: block;
   max-width: 100%;
 }
 
 /* 6. Inherit fonts for form controls */
-input, button, textarea, select {
+input,
+button,
+textarea,
+select {
   font: inherit;
 }
 
 /* 7. Avoid text overflows */
-p, h1, h2, h3, h4, h5, h6 {
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   overflow-wrap: break-word;
 }
 
@@ -55,6 +70,12 @@ p, h1, h2, h3, h4, h5, h6 {
   width: 100%;
   bottom: 0;
   margin-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
 }
 
 .social-section {
@@ -62,7 +83,11 @@ p, h1, h2, h3, h4, h5, h6 {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  width: 15%;
+  gap: 1rem;
+}
+
+.margin-below {
+  margin-bottom: 1rem;
 }
 
 .container {
@@ -85,6 +110,8 @@ p, h1, h2, h3, h4, h5, h6 {
   color: white;
   font-size: 0.88rem;
   font-weight: 600;
+  border: none;
+  cursor: pointer;
   background-color: hsl(171, 66%, 44%);
 }
 
@@ -99,6 +126,8 @@ p, h1, h2, h3, h4, h5, h6 {
   color: white;
   font-size: 0.88rem;
   font-weight: 600;
+  border: none;
+  cursor: pointer;
   background-color: hsl(233, 100%, 69%);
 }
 
@@ -125,6 +154,9 @@ p, h1, h2, h3, h4, h5, h6 {
   color: hsl(201, 11%, 66%);
   font-weight: 400;
 }
+.clipboard-section h2 {
+  text-align: center;
+}
 
 .benefits-section {
   display: flex;
@@ -132,6 +164,7 @@ p, h1, h2, h3, h4, h5, h6 {
   justify-content: space-between;
   align-items: center;
   gap: 3rem;
+  margin-top: 5rem;
 }
 .benefits-section div {
   display: flex;
@@ -151,4 +184,101 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 .benefits-section h3 {
   padding-bottom: 1rem;
+}
+.benefits-section h2 {
+  text-align: center;
+}
+
+.clipboard-access-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 5rem;
+}
+.clipboard-access-section p {
+  font-size: 0.885rem;
+  text-align: center;
+  color: hsl(201, 11%, 66%);
+  font-weight: 400;
+  padding-bottom: 2rem;
+}
+.clipboard-access-section h2 {
+  text-align: center;
+}
+
+.tracking-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 6rem;
+}
+.tracking-section p {
+  font-size: 0.885rem;
+  text-align: center;
+  color: hsl(201, 11%, 66%);
+  font-weight: 400;
+  padding-bottom: 2rem;
+}
+.tracking-section div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.tracking-section img {
+  padding-bottom: 2rem;
+}
+.tracking-section h2 {
+  text-align: center;
+}
+
+.header-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+.header-section p {
+  font-size: 0.885rem;
+  text-align: center;
+  color: hsl(201, 11%, 66%);
+  font-weight: 400;
+  padding-bottom: 2rem;
+}
+.header-section h1 {
+  line-height: 100%;
+  text-align: center;
+}
+
+.desktop-header-image {
+  display: none;
+}
+
+.mobile-header-image {
+  display: block;
+  top: 0;
+  left: 0;
+  position: fixed;
+  width: 100%;
+}
+
+@media (min-width: 50rem) {
+  body {
+    background-color: red;
+  }
+  .desktop-header-image {
+    display: block;
+    top: 0;
+    left: 0;
+    position: fixed;
+    width: 100%;
+  }
+  .mobile-header-image {
+    display: none;
+  }
 }/*# sourceMappingURL=style.css.map */

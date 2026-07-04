@@ -1,4 +1,3 @@
-
 $green-500: hsl(171, 66%, 44%);
 $blue-100: hsl(233, 100%, 69%);
 $gray-700: hsl(210, 10%, 33%);
@@ -12,35 +11,38 @@ $font-button: 0.88rem;
 $font-small: 0.885rem;
 
 @mixin button-deco {
-    width: 15rem;
-    height: 2.5rem;
-    border-radius: 5rem;
-    padding: 1rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: $white;
-    font-size: $font-button;
-    font-weight: $font-weight-two;
-    
-    // box shadow needed
+  width: 15rem;
+  height: 2.5rem;
+  border-radius: 5rem;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $white;
+  font-size: $font-button;
+  font-weight: $font-weight-two;
+  border: none;
+  cursor: pointer;
+
+  // box shadow needed
 }
 
 @mixin flexcentercol {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
- 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
 @mixin description {
-    font-size: $font-small;
-    text-align: center;
-    color: $gray-500;
-    font-weight: 400;
+  font-size: $font-small;
+  text-align: center;
+  color: $gray-500;
+  font-weight: 400;
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -54,38 +56,46 @@ body {
   line-height: 1.5;
   /* 4. Improve centering within parent */
   min-height: 100vh;
-font-family: $font-general;
-font-size: $font-size;
-color: $gray-700;
-display: flex;
-flex-direction: column;
-justify-content: space-between;
-align-items: center;
-
-
+  font-family: $font-general;
+  font-size: $font-size;
+  color: $gray-700;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
 
 /* 5. Improve media defaults */
-img, picture, video, canvas, svg {
+img,
+picture,
+video,
+canvas,
+svg {
   display: block;
   max-width: 100%;
 }
 
 /* 6. Inherit fonts for form controls */
-input, button, textarea, select {
+input,
+button,
+textarea,
+select {
   font: inherit;
 }
 
 /* 7. Avoid text overflows */
-p, h1, h2, h3, h4, h5, h6 {
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   overflow-wrap: break-word;
-
 }
 
-
-
 /* remove animations for people who've turned them off */
-@media (prefers-reduced-motion: reduce) {  
+@media (prefers-reduced-motion: reduce) {
   *,
   *::before,
   *::after {
@@ -97,73 +107,154 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 .footer-section {
-    background-color: $gray-500;
-    color: $gray-700;
-    font-weight: $font-weight-two;
-    width: 100%;
-    bottom: 0;
-    margin-top: 5rem; // add to variables
-    // desktop version isnt at bottom
+  background-color: $gray-500;
+  color: $gray-700;
+  font-weight: $font-weight-two;
+  width: 100%;
+  bottom: 0;
+  margin-top: 5rem;
+  @include flexcentercol;
+  text-align: center;
+  padding: 2rem;
 }
 
 .social-section {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    width: 15%;
-    
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+.margin-below {
+  margin-bottom: 1rem;
 }
 .container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    width: 90%;
-    padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  padding: 2rem;
 }
 
 .ios-button {
-    @include button-deco;
-    background-color: $green-500;
+  @include button-deco;
+  background-color: $green-500;
 }
 .mac-button {
-    @include button-deco;
-    background-color: $blue-100;
+  @include button-deco;
+  background-color: $blue-100;
 }
 .logo-section {
-    @include flexcentercol;
-    margin-bottom: 5rem;
-    margin-top: 5rem;
-    gap: 3rem;
+  @include flexcentercol;
+  margin-bottom: 5rem;
+  margin-top: 5rem;
+  gap: 3rem;
 }
 
 .clipboard-section {
-    @include flexcentercol;
-    gap: 1rem;
+  @include flexcentercol;
+  gap: 1rem;
 
-    p {
-        @include description;
-    }
+  p {
+    @include description;
+  }
+  h2 {
+    text-align: center;
+  }
 }
 
 .benefits-section {
+  @include flexcentercol;
+  gap: 3rem;
+  margin-top: 5rem;
+  div {
     @include flexcentercol;
-    gap: 3rem;
+  }
+  p {
+    @include description;
+    padding-bottom: 2rem;
+  }
 
-    div {
-         @include flexcentercol;
-        
-    }
-    p {
-        @include description;
-        padding-bottom: 2rem;
-    }
-    
-    img {
-        padding-bottom: 1.5rem;
-    }
-    h3 {
-        padding-bottom: 1rem;
-    }
+  img {
+    padding-bottom: 1.5rem;
+  }
+  h3 {
+    padding-bottom: 1rem;
+  }
+  h2 {
+    text-align: center;
+  }
+}
+
+.clipboard-access-section {
+  @include flexcentercol;
+  gap: 1rem;
+  margin-top: 5rem;
+  p {
+    @include description;
+    padding-bottom: 2rem;
+  }
+  h2 {
+    text-align: center;
+  }
+}
+
+.tracking-section {
+  @include flexcentercol;
+  gap: 1rem;
+  margin-top: 6rem;
+  p {
+    @include description;
+    padding-bottom: 2rem;
+  }
+  div {
+    @include flexcentercol;
+  }
+  img {
+    padding-bottom: 2rem;
+  }
+  h2 {
+    text-align: center;
+  }
+}
+.header-section {
+  @include flexcentercol;
+  gap: 1rem;
+  p {
+    @include description;
+    padding-bottom: 2rem;
+  }
+  h1 {
+    line-height: 100%;
+    text-align: center;
+  }
+}
+
+.desktop-header-image {
+  display: none;
+}
+
+.mobile-header-image {
+  display: block;
+  top: 0;
+  left: 0;
+  position: fixed;
+  width: 100%;
+}
+
+@media (min-width: 50rem) {
+  body {
+    background-color: red;
+  }
+  .desktop-header-image {
+    display: block;
+    top: 0;
+    left: 0;
+    position: fixed;
+    width: 100%;
+  }
+  .mobile-header-image {
+    display: none;
+  }
 }

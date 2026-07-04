@@ -10,46 +10,75 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
   <title>Frontend Mentor | Clipboard landing page</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 0.6875rem; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+ 
 </head>
 <body>
+  <img
+  src="./images/bg-header-mobile.png"
+  alt="header image mobile"
+  class="mobile-header-image"
+
+  >
+  <img
+  src="./images/bg-header-desktop.png"
+  alt="header image desktop"
+  class="desktop-header-image"
+  >
 <main class="container">
   
-    A history of everything you copy
+    <header class="header-section">
+      <img
+      src="./images/logo.svg"
+      alt="header green logo"
+
+      >
+      <h1>A history of everything you copy</h1>
+      <p>
+        Clipboard allows you to track and organize everything you
+        copy. Instantly access your clipboard on all your devices.
+      </p>
+      <button class="ios-button">Download for iOS</button>
+      <button class="mac-button">Download for Mac</button>
+    </header>
   
-    Clipboard allows you to track and organize everything you
-    copy. Instantly access your clipboard on all your devices.
+    <section class="tracking-section">
+
+      <div>
+        <h2>Keep track of your snippets</h2>
+        <p>
+          Clipboard instantly stores any item you copy in the cloud,
+          meaning you can access your snippets immediately on all your
+          devices. Our Mac and iOS apps will help you organize everything.
+        </p>
+      </div>
+
+      <div>
+        <img
+        src="./images/image-computer.png"
+        alt="computer image mac"
+        >
+        <div>
+          <h3>Quick Search</h3>
+          <p>Easily search your snippets by content, category, web address, application, and more.</p>
+          <h3>iCloud Sync</h3>
+          <p>Instantly saves and syncs snippets across all your devices.</p>
+          <h3>Complete History</h3>
+          <p>Retrieve any snippets from the first moment you started using the app.</p>
+        </div>
+      </div>
+    </section>
   
-    Download for iOS
-    Download for Mac
-  
-    Keep track of your snippets
-  
-    Clipboard instantly stores any item you copy in the cloud,
-    meaning you can access your snippets immediately on all your
-    devices. Our Mac and iOS apps will help you organize everything.
-  
-    Quick Search
-  
-    Easily search your snippets by content, category, web address, application, and more.
-  
-    iCloud Sync
-  
-    Instantly saves and syncs snippets across all your devices.
-  
-    Complete History
-  
-    Retrieve any snippets from the first moment you started using the app.
-  
-    Access Clipboard anywhere
-  
-    Whether you’re on the go, or at your computer, you can access all your Clipboard
-    snippets in a few simple clicks.
+    <section class="clipboard-access-section">
+      <h2>Access Clipboard anywhere</h2>
+      <p>
+        Whether you’re on the go, or at your computer, you can access all your Clipboard
+        snippets in a few simple clicks.
+      </p>
+      <img
+      src="./images/image-devices.png"
+      alt="device image"
+      >
+    </section>
   
     <section class="benefits-section">
       <div>
@@ -121,8 +150,8 @@
         and you’re ready to start adding to your clipboard.
       </p>
      
-        <div class="ios-button">Download for iOS</div>
-        <div class="mac-button">Download for Mac</div>
+        <button class="ios-button">Download for iOS</button>
+        <button class="mac-button">Download for Mac</button>
       
     </section>
   
@@ -135,16 +164,17 @@
       width="50"
       height="50"
       alt="footer logo bottom"
+      class="margin-below"
       >
       <div>
-        FAQs
-        Contact Us
+        <p class="margin-below">FAQs</p>
+        <p class="margin-below">Contact Us</p>
       </div>
       <div>
-        Privacy Policy
-        Press Kit
+        <p class="margin-below">Privacy Policy</p>
+        <p class="margin-below">Press Kit</p>
       </div>
-      <div>Install Guide</div>
+      <div class="margin-below"><p>Install Guide</p></div>
 
         <div class="social-section">
           <img 
