@@ -3,12 +3,41 @@ $green-500: hsl(171, 66%, 44%);
 $blue-100: hsl(233, 100%, 69%);
 $gray-700: hsl(210, 10%, 33%);
 $gray-500: hsl(201, 11%, 66%);
+$white: white;
 $font-general: "Bai Jamjuree", sans-serif;
 $font-weight-one: 400;
 $font-weight-two: 600;
+$font-size: 1.125rem;
+$font-button: 0.88rem;
+$font-small: 0.885rem;
 
-@mixin theme ($theme: green-500) {
+@mixin button-deco {
+    width: 15rem;
+    height: 2.5rem;
+    border-radius: 5rem;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $white;
+    font-size: $font-button;
+    font-weight: $font-weight-two;
+    
+    // box shadow needed
+}
 
+@mixin flexcentercol {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+ 
+}
+@mixin description {
+    font-size: $font-small;
+    text-align: center;
+    color: $gray-500;
+    font-weight: 400;
 }
 
 *, *::before, *::after {
@@ -26,6 +55,12 @@ body {
   /* 4. Improve centering within parent */
   min-height: 100vh;
 font-family: $font-general;
+font-size: $font-size;
+color: $gray-700;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+align-items: center;
 
 
 }
@@ -44,7 +79,9 @@ input, button, textarea, select {
 /* 7. Avoid text overflows */
 p, h1, h2, h3, h4, h5, h6 {
   overflow-wrap: break-word;
+
 }
+
 
 
 /* remove animations for people who've turned them off */
@@ -64,7 +101,9 @@ p, h1, h2, h3, h4, h5, h6 {
     color: $gray-700;
     font-weight: $font-weight-two;
     width: 100%;
-    
+    bottom: 0;
+    margin-top: 5rem; // add to variables
+    // desktop version isnt at bottom
 }
 
 .social-section {
@@ -80,5 +119,30 @@ p, h1, h2, h3, h4, h5, h6 {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    width: 90%;
+    padding: 2rem;
 }
 
+.ios-button {
+    @include button-deco;
+    background-color: $green-500;
+}
+.mac-button {
+    @include button-deco;
+    background-color: $blue-100;
+}
+.logo-section {
+    @include flexcentercol;
+    margin-bottom: 5rem;
+    margin-top: 5rem;
+    gap: 3rem;
+}
+
+.clipboard-section {
+    @include flexcentercol;
+    gap: 1rem;
+
+    p {
+        @include description;
+    }
+}
