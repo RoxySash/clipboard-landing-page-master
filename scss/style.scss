@@ -1,0 +1,56 @@
+
+$green-500: hsl(171, 66%, 44%);
+$blue-100: hsl(233, 100%, 69%);
+$gray-700: hsl(210, 10%, 33%);
+$gray-500: hsl(201, 11%, 66%);
+$font-general: "Bai Jamjuree", sans-serif;
+$font-weight-one: 400;
+$font-weight-two: 600;
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+  margin: 0;
+}
+
+body {
+  /* 3. Add accessible line-height */
+  line-height: 1.5;
+  /* 4. Improve centering within parent */
+  min-height: 100vh;
+font-family: $font-general;
+
+
+}
+
+/* 5. Improve media defaults */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 6. Inherit fonts for form controls */
+input, button, textarea, select {
+  font: inherit;
+}
+
+/* 7. Avoid text overflows */
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+
+/* remove animations for people who've turned them off */
+@media (prefers-reduced-motion: reduce) {  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms;
+    animation-iteration-count: 1;
+    transition-duration: 0.01ms;
+    scroll-behavior: auto;
+  }
+}
