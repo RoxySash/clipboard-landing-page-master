@@ -25,6 +25,7 @@ $font-small: 0.885rem;
   font-weight: $font-weight-two;
   border: none;
   cursor: pointer;
+  margin-bottom: 1rem;
 
   // box shadow needed
 }
@@ -34,6 +35,20 @@ $font-small: 0.885rem;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+}
+
+@mixin flexcenterrow {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+}
+@mixin flexrow {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 @mixin description {
   font-size: $font-small;
@@ -65,6 +80,7 @@ body {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  
 }
 
 /* 5. Improve media defaults */
@@ -143,7 +159,10 @@ h6 {
   @include button-deco;
   background-color: $green-500;
   border-bottom: 0.25rem solid $greenshade;
+  
 }
+
+
 .mac-button {
   @include button-deco;
   background-color: $blue-100;
@@ -248,8 +267,8 @@ h6 {
 }
 
 @media (min-width: 50rem) {
-  body {
-    background-color: red;
+  .container {
+    max-width: 1100px;
   }
   .desktop-header-image {
     display: block;
@@ -261,4 +280,81 @@ h6 {
   .mobile-header-image {
     display: none;
   }
+  .footer-section {
+    @include flexcenterrow;
+    padding-left: 6rem;
+    padding-right: 6rem;
+    font-size: $font-small;
+    text-align: left;
+  }
+  .button-layout {
+    @include flexrow;
+    gap: 1rem;
+  }
+
+  .logo-section {
+    @include flexrow;
+  }
+.benefits-section {
+   gap: 2rem;
+   div {
+    @include flexrow;
+   }
+.sec-ben-top {
+     @include flexcentercol;
+    
+}
+}
+
+.benefits-sec-one {
+    @include flexrow;
+    
+  .sec-ben {
+    @include flexcentercol;
+  
+    padding: 1rem;
+}
+}
+  .devices-image {
+    width: 80%;
+  }
+
+.computer-image {
+    width: 50%;
+}
+
+.tracking-section {
+    div{
+        @include flexrow;
+    }
+.track-title {
+    @include flexcentercol;
+ 
+    width: 50%;
+}
+}
+.tracking-section-bottom {
+    @include flexrow;
+    gap: 6rem;
+   
+
+    div {
+        @include flexcentercol;
+      
+        margin-left: 0;
+        padding-left: 0;        
+    }
+    h3 {
+    align-self:flex-start;
+       padding-left: 0;
+        margin-left: 0;
+    }
+    p {
+        text-align: left;
+        padding-left: 0;
+        margin-left: 0;
+    }
+
+}
+
 }

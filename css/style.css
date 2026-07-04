@@ -112,6 +112,7 @@ h6 {
   font-weight: 600;
   border: none;
   cursor: pointer;
+  margin-bottom: 1rem;
   background-color: hsl(171, 66%, 44%);
   border-bottom: 0.25rem solid hsl(171, 68%, 29%);
 }
@@ -129,6 +130,7 @@ h6 {
   font-weight: 600;
   border: none;
   cursor: pointer;
+  margin-bottom: 1rem;
   background-color: hsl(233, 100%, 69%);
   border-bottom: 0.25rem solid hsl(233, 43%, 43%);
 }
@@ -270,8 +272,8 @@ h6 {
 }
 
 @media (min-width: 50rem) {
-  body {
-    background-color: red;
+  .container {
+    max-width: 1100px;
   }
   .desktop-header-image {
     display: block;
@@ -282,5 +284,100 @@ h6 {
   }
   .mobile-header-image {
     display: none;
+  }
+  .footer-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 6rem;
+    padding-right: 6rem;
+    font-size: 0.885rem;
+    text-align: left;
+  }
+  .button-layout {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+  .logo-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .benefits-section {
+    gap: 2rem;
+  }
+  .benefits-section div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .benefits-section .sec-ben-top {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .benefits-sec-one {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .benefits-sec-one .sec-ben {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+  }
+  .devices-image {
+    width: 80%;
+  }
+  .computer-image {
+    width: 50%;
+  }
+  .tracking-section div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .tracking-section .track-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+  }
+  .tracking-section-bottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 6rem;
+  }
+  .tracking-section-bottom div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 0;
+    padding-left: 0;
+  }
+  .tracking-section-bottom h3 {
+    align-self: flex-start;
+    padding-left: 0;
+    margin-left: 0;
+  }
+  .tracking-section-bottom p {
+    text-align: left;
+    padding-left: 0;
+    margin-left: 0;
   }
 }/*# sourceMappingURL=style.css.map */
