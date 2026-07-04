@@ -113,6 +113,7 @@ h6 {
   border: none;
   cursor: pointer;
   background-color: hsl(171, 66%, 44%);
+  border-bottom: 0.25rem solid hsl(171, 68%, 29%);
 }
 
 .mac-button {
@@ -129,6 +130,7 @@ h6 {
   border: none;
   cursor: pointer;
   background-color: hsl(233, 100%, 69%);
+  border-bottom: 0.25rem solid hsl(233, 43%, 43%);
 }
 
 .logo-section {

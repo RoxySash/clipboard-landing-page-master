@@ -1,5 +1,7 @@
 $green-500: hsl(171, 66%, 44%);
+$greenshade: hsl(171, 68%, 29%);
 $blue-100: hsl(233, 100%, 69%);
+$blueshade: hsl(233, 43%, 43%);
 $gray-700: hsl(210, 10%, 33%);
 $gray-500: hsl(201, 11%, 66%);
 $white: white;
@@ -140,10 +142,12 @@ h6 {
 .ios-button {
   @include button-deco;
   background-color: $green-500;
+  border-bottom: 0.25rem solid $greenshade;
 }
 .mac-button {
   @include button-deco;
   background-color: $blue-100;
+  border-bottom: 0.25rem solid $blueshade;
 }
 .logo-section {
   @include flexcentercol;
