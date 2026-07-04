@@ -146,3 +146,24 @@ p, h1, h2, h3, h4, h5, h6 {
         @include description;
     }
 }
+
+.benefits-section {
+    @include flexcentercol;
+    gap: 3rem;
+
+    div {
+         @include flexcentercol;
+        
+    }
+    p {
+        @include description;
+        padding-bottom: 2rem;
+    }
+    
+    img {
+        padding-bottom: 1.5rem;
+    }
+    h3 {
+        padding-bottom: 1rem;
+    }
+}

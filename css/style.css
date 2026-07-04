@@ -124,4 +124,31 @@ p, h1, h2, h3, h4, h5, h6 {
   text-align: center;
   color: hsl(201, 11%, 66%);
   font-weight: 400;
+}
+
+.benefits-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3rem;
+}
+.benefits-section div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.benefits-section p {
+  font-size: 0.885rem;
+  text-align: center;
+  color: hsl(201, 11%, 66%);
+  font-weight: 400;
+  padding-bottom: 2rem;
+}
+.benefits-section img {
+  padding-bottom: 1.5rem;
+}
+.benefits-section h3 {
+  padding-bottom: 1rem;
 }/*# sourceMappingURL=style.css.map */
