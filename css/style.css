@@ -41,4 +41,25 @@ p, h1, h2, h3, h4, h5, h6 {
     transition-duration: 0.01ms;
     scroll-behavior: auto;
   }
+}
+.footer-section {
+  background-color: hsl(201, 11%, 66%);
+  color: hsl(210, 10%, 33%);
+  font-weight: 600;
+  width: 100%;
+}
+
+.social-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 15%;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }/*# sourceMappingURL=style.css.map */

@@ -7,6 +7,10 @@ $font-general: "Bai Jamjuree", sans-serif;
 $font-weight-one: 400;
 $font-weight-two: 600;
 
+@mixin theme ($theme: green-500) {
+
+}
+
 *, *::before, *::after {
   box-sizing: border-box;
 }
@@ -54,3 +58,27 @@ p, h1, h2, h3, h4, h5, h6 {
     scroll-behavior: auto;
   }
 }
+
+.footer-section {
+    background-color: $gray-500;
+    color: $gray-700;
+    font-weight: $font-weight-two;
+    width: 100%;
+    
+}
+
+.social-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 15%;
+    
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
