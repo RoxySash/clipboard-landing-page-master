@@ -111,10 +111,10 @@ h6 {
   font-size: 0.88rem;
   font-weight: 600;
   border: none;
-  cursor: pointer;
   margin-bottom: 1rem;
   background-color: hsl(171, 66%, 44%);
   border-bottom: 0.25rem solid hsl(171, 68%, 29%);
+  cursor: pointer;
 }
 
 .mac-button {
@@ -129,10 +129,10 @@ h6 {
   font-size: 0.88rem;
   font-weight: 600;
   border: none;
-  cursor: pointer;
   margin-bottom: 1rem;
   background-color: hsl(233, 100%, 69%);
   border-bottom: 0.25rem solid hsl(233, 43%, 43%);
+  cursor: pointer;
 }
 
 .logo-section {

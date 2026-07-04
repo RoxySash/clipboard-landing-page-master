@@ -24,7 +24,6 @@ $font-small: 0.885rem;
   font-size: $font-button;
   font-weight: $font-weight-two;
   border: none;
-  cursor: pointer;
   margin-bottom: 1rem;
 
   // box shadow needed
@@ -38,17 +37,16 @@ $font-small: 0.885rem;
 }
 
 @mixin flexcenterrow {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 @mixin flexrow {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 @mixin description {
   font-size: $font-small;
@@ -80,7 +78,6 @@ body {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  
 }
 
 /* 5. Improve media defaults */
@@ -136,6 +133,8 @@ h6 {
   padding: 2rem;
 }
 
+
+
 .social-section {
   display: flex;
   flex-direction: row;
@@ -159,14 +158,14 @@ h6 {
   @include button-deco;
   background-color: $green-500;
   border-bottom: 0.25rem solid $greenshade;
-  
+  cursor: pointer;
 }
-
 
 .mac-button {
   @include button-deco;
   background-color: $blue-100;
   border-bottom: 0.25rem solid $blueshade;
+  cursor: pointer;
 }
 .logo-section {
   @include flexcentercol;
@@ -295,66 +294,62 @@ h6 {
   .logo-section {
     @include flexrow;
   }
-.benefits-section {
-   gap: 2rem;
-   div {
-    @include flexrow;
-   }
-.sec-ben-top {
-     @include flexcentercol;
-    
-}
-}
+  .benefits-section {
+    gap: 2rem;
+    div {
+      @include flexrow;
+    }
+    .sec-ben-top {
+      @include flexcentercol;
+    }
+  }
 
-.benefits-sec-one {
+  .benefits-sec-one {
     @include flexrow;
-    
-  .sec-ben {
-    @include flexcentercol;
-  
-    padding: 1rem;
-}
-}
+
+    .sec-ben {
+      @include flexcentercol;
+
+      padding: 1rem;
+    }
+  }
   .devices-image {
     width: 80%;
   }
 
-.computer-image {
+  .computer-image {
     width: 50%;
-}
+  }
 
-.tracking-section {
-    div{
-        @include flexrow;
+  .tracking-section {
+    div {
+      @include flexrow;
     }
-.track-title {
-    @include flexcentercol;
- 
-    width: 50%;
-}
-}
-.tracking-section-bottom {
+    .track-title {
+      @include flexcentercol;
+
+      width: 50%;
+    }
+  }
+  .tracking-section-bottom {
     @include flexrow;
     gap: 6rem;
-   
 
     div {
-        @include flexcentercol;
-      
-        margin-left: 0;
-        padding-left: 0;        
+      @include flexcentercol;
+
+      margin-left: 0;
+      padding-left: 0;
     }
     h3 {
-    align-self:flex-start;
-       padding-left: 0;
-        margin-left: 0;
+      align-self: flex-start;
+      padding-left: 0;
+      margin-left: 0;
     }
     p {
-        text-align: left;
-        padding-left: 0;
-        margin-left: 0;
+      text-align: left;
+      padding-left: 0;
+      margin-left: 0;
     }
-
-}
-
+  }
 }
